@@ -14,3 +14,4 @@ class Student {
     this.age = (int)(Math.random()*20 + 10);
 }
 }
+

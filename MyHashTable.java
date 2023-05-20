@@ -142,3 +142,15 @@ public class MyHashTable<K, V> {
         System.out.println("Bucket Sizes: " + bucketSizes);
     }
 }
+    public void putAll(MyHashTable<K, V> otherHashTable) {
+        for (int i = 0; i < otherHashTable.chainArray.length; i++) {
+            HashNode<K, V> node = otherHashTable.chainArray[i];
+            while (node != null) {
+                put(node.key, node.value);
+                node = node.next;
+            }
+        }
+    }
+
+
+
